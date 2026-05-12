@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game</title>
+
+<link rel="stylesheet" href="startPage.css">
+<script src="game.js" defer></script>
+
+ <!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Video -->
+    <video autoplay muted id="myVideo">
+        <source src="images/StartScreen.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Start Menu -->
+    <div id="startPage">
+        <a href="game.html?level=1" class="menu-btn ">Start</a>
+        <button onclick="openPopup('levelsPopup')" class="menu-btn">Levels</button>
+        <button onclick="openPopup('howPopup')" class="menu-btn">How To Play</button>
+    </div>
+
+  <!-- Levels Popup -->
+  <div id="levelsPopup" class="popup">
+    <div class="card">
+      <button onclick="closePopup('levelsPopup')" class="close-btn">X</button>
+      <h2>Levels</h2>
+      <div class="levels-grid">
+        <a href="game.html?level=1" class="level-btn">Level 1</a>
+        <a href="game.html?level=2" class="level-btn">Level 2</a>
+        <a href="game.html?level=3" class="level-btn">Level 3</a>
+        <a href="game.html?level=4" class="level-btn">Level 4</a>
+        <a href="game.html?level=5" class="level-btn">Level 5</a>
+      </div>
+    </div>
+  </div>
+    
+    <!-- How To Play Popup -->
+    <div id="howPopup" class="popup">
+        <div class="card">
+            <button onclick="closePopup('howPopup')" class="close-btn">X</button>
+            <h2>How To Play</h2>
+            <ul>
+                <li>Use up and down arrow keys to move</li>
+                <li>Avoid the opstycles</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
