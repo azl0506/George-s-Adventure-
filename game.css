@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(images/4.jpg);
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Zen Dots", sans-serif;
+}
+canvas{
+    border: 2px solid black;
+    width: 1535px;
+    height: 790px;
+    image-rendering: pixelated;
+}
+
+#hitPopup{
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.playAgain{
+  font-family: "Zen Dots", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 16px 28px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.playAgain:hover{
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
+  color: white
+}
+
+.playAgainWin{
+  font-family: "Zen Dots", sans-serif;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 16px 28px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  text-align: center;
+  margin: 10px;
+}
+
+.playAgainWin:hover{
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
+  color: white
+}
+
+#winPopup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

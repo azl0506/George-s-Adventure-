@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js" defer></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <canvas id="myCanvas" ></canvas>
+
+    <div id="hitPopup">
+        <h1 style="color:white; font-size: 35px;">You Died!</h1>
+        <button onclick="resetGame()" class="playAgain">Play Again</button>
+    </div>
+
+    <div id="winPopup">
+        <h1 style="color:white; font-size: 35px;">You Won!</h1>
+        <button onclick="resetGame()" class="playAgainWin">Play Again</button>
+        <button onclick="goNextLevel()" class="playAgainWin" id="nextLevelBtn">Next Level</button>
+        <button onclick="window.location.href='index.html'" class="playAgainWin" id="homeBtn" style="display:none">Return Home</button>
+    </div>
+</body>
+</html>
