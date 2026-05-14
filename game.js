@@ -169,7 +169,7 @@ function jump() {
 
     if (keys["arrowup"] && player.grounded) {
         const currentRowIndex = closestRowIndex();
-        if (keys["arrowup"] && player.jumpsLeft > 0) {
+        if (keys["arrowup"] && player.jumpsLeft > 0 && currentRowIndex > 0) {
             player.grounded = false;
             player.jumpsLeft--;
             player.targetY = rows[currentRowIndex - 1] + rowHeight / 2 - playerH / 2;
@@ -178,7 +178,7 @@ function jump() {
 
     if (keys["arrowdown"] && player.jumpsLeft > 0 ) {
         const currentRowIndex = closestRowIndex();
-        if (currentRowIndex < maxObjects) {
+        if (currentRowIndex < maxObjects - 1) {
             player.grounded = false;
             player.jumpsLeft--;
             player.targetY = rows[currentRowIndex + 1] + rowHeight / 2 - playerH / 2;
