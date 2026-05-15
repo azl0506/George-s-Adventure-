@@ -119,7 +119,7 @@ function startTimer(){
         if(timeLeft <= 0){
             clearInterval(timerInterval);
             gameRunning = false;
-            if(currentLevel >= MAX_LEVEL){
+            if(currentLevel <= MAX_LEVEL){
                 document.getElementById("nextLevelBtn").style.display = "none"
                 document.getElementById("homeBtn").style.display = "inline-block"
             }
