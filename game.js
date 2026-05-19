@@ -120,7 +120,7 @@ function startTimer(){
             clearInterval(timerInterval);
             gameRunning = false;
             if(currentLevel <= MAX_LEVEL){
-                document.getElementById("nextLevelBtn").style.display = "none"
+                document.getElementById("nextLevelBtn").style.display = "inline-block"
                 document.getElementById("homeBtn").style.display = "inline-block"
             }
             openPopup("winPopup");
@@ -272,9 +272,10 @@ function checkCollision(){
             isHit = true;
             obj.x = -(obj.width + 10);
             if(hearts <= 0){
+                document.getElementById("homeBtn").style.display = "inline-block"
+                openPopup("hitPopup");
                 gameRunning = false;
                 clearInterval(timerInterval);
-                openPopup("hitPopup");
             }
         }
     }
